@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h2>Customer Purchase Prediction</h2>
+        <label for="Age">Age:</label>
+        <input type="number" name="Age" required>
+
+        <label for="Gender">Gender (0 = Female, 1 = Male):</label>
+        <input type="number" name="Gender" required>
+
+        <label for="AnnualIncome">Annual Income:</label>
+        <input type="number" name="AnnualIncome" required>
+
+        <label for="NumberOfPurchases">Number of Purchases:</label>
+        <input type="number" name="NumberOfPurchases" required>
+
+        <label for="ProductCategory">Product Category:</label>
+        <input type="number" name="ProductCategory" required>
+
+        <label for="TimeSpentOnWebsite">Time Spent on Website:</label>
+        <input type="number" name="TimeSpentOnWebsite" required>
+
+        <label for="LoyaltyProgram">Loyalty Program (0 = No, 1 = Yes):</label>
+        <input type="number" name="LoyaltyProgram" required>
+
+        <label for="DiscountsAvailed">Discounts Availed:</label>
+        <input type="number" name="DiscountsAvailed" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
